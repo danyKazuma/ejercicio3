@@ -1,0 +1,175 @@
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop
+$ pwd
+/c/Users/Dany/Desktop
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop
+$ mkdir ejercicio3
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop
+$ cd ejercicio3/
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3
+$ git init
+Initialized empty Git repository in C:/Users/Dany/Desktop/ejercicio3/.git/
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (master)
+$ code
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (master)
+$ git add index.html
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (master)
+$ git commit -m "Version inicial"
+[master (root-commit) b523e8f] Version inicial
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (master)
+$ git branch -M main
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (main)
+$ git remote add origin git@github.com:danyKazuma/ejercicio3.git
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (main)
+$ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 233 bytes | 233.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:danyKazuma/ejercicio3.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (main)
+$ git branch develop
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (main)
+$ git branch -M develop
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (develop)
+$ git checkout develop
+Already on 'develop'
+Your branch is up to date with 'origin/main'.
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (develop)
+$ git status
+On branch develop
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .env
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (develop)
+$ git status
+On branch develop
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (develop)
+$ git add .gitignore
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (develop)
+$ git add index.html
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (develop)
+$ git commit -m "Cambios en la rama develop"
+[develop 03b72d3] Cambios en la rama develop
+ 2 files changed, 81 insertions(+)
+ create mode 100644 .gitignore
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (develop)
+$ git checkout main
+Switched to a new branch 'main'
+branch 'main' set up to track 'origin/main'.
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .env
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (main)
+$ cat index.html
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (main)
+$ git merge develop
+Updating b523e8f..03b72d3
+Fast-forward
+ .gitignore | 69 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ index.html | 12 +++++++++++
+ 2 files changed, 81 insertions(+)
+ create mode 100644 .gitignore
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (main)
+$ cat index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Mundo</title>
+</head>
+<body>
+    <h1>Hola Mundo</h1>
+</body>
+</html>
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (main)
+$ git ls-files --other --ignored --exclude-standard
+.env
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (main)
+$ git add .
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (main)
+$ git remote add origin git@github.com:danyKazuma/ejercicio3.git
+error: remote origin already exists.
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (main)
+$ git branch -M main
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (main)
+$ git push -u origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.16 KiB | 1.16 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:danyKazuma/ejercicio3.git
+   b523e8f..03b72d3  main -> main
+branch 'main' set up to track 'origin/main'.
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Dany@DESKTOP-LNCCFMK MINGW64 ~/Desktop/ejercicio3 (main)
+$
